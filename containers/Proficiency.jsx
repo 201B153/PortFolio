@@ -48,12 +48,14 @@ const Proficiency = () => {
           </MDBCol>
           <MDBCol size="4">
             <div className="box">
-              <div className="proficiency-topic">&nbsp;&nbsp;&nbsp;&nbsp;Rust</div>
+              <div className="proficiency-topic">
+                &nbsp;&nbsp;&nbsp;&nbsp;Rust
+              </div>
               <div className="green">
                 <div className="progress">
                   <div className="inner">
                     <div className="percent">
-                      <span>&nbsp;&nbsp;65</span>%
+                      <span>&nbsp;&nbsp;80</span>%
                     </div>
                     <div className="water"></div>
                     <div className="glare"></div>
@@ -89,7 +91,7 @@ const Proficiency = () => {
                 <div className="progress">
                   <div className="inner">
                     <div className="percent">
-                      <span>&nbsp;&nbsp;55</span>%
+                      <span>&nbsp;&nbsp;60</span>%
                     </div>
                     <div className="water"></div>
                     <div className="glare"></div>
@@ -107,7 +109,7 @@ const Proficiency = () => {
                 <div className="progress">
                   <div className="inner">
                     <div className="percent">
-                      <span>&nbsp;&nbsp;70</span>%
+                      <span>&nbsp;&nbsp;90</span>%
                     </div>
                     <div className="water"></div>
                     <div className="glare"></div>
