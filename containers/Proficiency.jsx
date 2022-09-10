@@ -9,6 +9,7 @@ const Proficiency = () => {
       <Fade bottom duration={2000}>
         <div className="pl-4">
           <h4 className="display-3 text-white">🌍 Proficiency</h4>
+          <br/>
         </div>
         <MDBRow>
           <MDBCol size="4">

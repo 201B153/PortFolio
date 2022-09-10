@@ -4,7 +4,7 @@ import GreetingLottie from '../components/DisplayLottie';
 import LottieMaker from '../components/DisplayLottie';
 import SocialLinks from '../components/SocialLinks';
 // Effects
-import GreetingBackGround from './GreetingBackGround.jsx';
+// import GreetingBackGround from './GreetingBackGround.jsx';
 
 const greetings = {
   name: '201b153',
@@ -36,7 +36,7 @@ const Greetings = () => {
   ]);
   return (
     <div>
-      <GreetingBackGround id="tsparticles" />
+      {/*<GreetingBackGround id="tsparticles" />*/}
       <section className="section section-lg section-shaped pb-250">
         <div className="shape shape-style-1">
           <span />
