@@ -1,7 +1,7 @@
 import { useCallback, useMemo } from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
-import { loadSlim } from 'tsparticles-slim';
+// import { loadSlim } from 'tsparticles-slim';
 
 const IndexBackground = (props) => {
   const options = useMemo(() => {
@@ -38,12 +38,12 @@ const IndexBackground = (props) => {
         detectsOn: 'window',
         events: {
           onClick: {
-            enable: false,
+            enable: true,
             mode: [],
           },
           onDiv: {
             selectors: [],
-            enable: false,
+            enable: true,
             mode: [],
             type: 'circle',
           },
@@ -284,74 +284,6 @@ const IndexBackground = (props) => {
               },
             },
             sizeOffset: true,
-            particles: {
-              stroke: {
-                width: 0,
-              },
-              color: {
-                value: ['#ff595e', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93'],
-              },
-              number: {
-                value: 0,
-              },
-              collisions: {
-                enable: false,
-              },
-              opacity: {
-                value: {
-                  min: 0.1,
-                  max: 1,
-                },
-                animation: {
-                  enable: true,
-                  speed: 0.7,
-                  sync: false,
-                  startValue: 'max',
-                  destroy: 'min',
-                },
-              },
-              shape: {
-                type: 'circle',
-              },
-              size: {
-                value: {
-                  min: 1,
-                  max: 2,
-                },
-                animation: {
-                  enable: true,
-                  speed: 5,
-                  count: 1,
-                  sync: false,
-                  startValue: 'min',
-                  destroy: 'none',
-                },
-              },
-              life: {
-                count: 1,
-                duration: {
-                  value: {
-                    min: 1,
-                    max: 2,
-                  },
-                },
-              },
-              move: {
-                decay: 0.05,
-                enable: true,
-                gravity: {
-                  enable: true,
-                  inverse: false,
-                  acceleration: 5,
-                },
-                speed: {
-                  min: 5,
-                  max: 10,
-                },
-                direction: 'none',
-                outModes: 'destroy',
-              },
-            },
           },
         },
         groups: {},
@@ -394,7 +326,11 @@ const IndexBackground = (props) => {
               value: 0,
             },
             enable: false,
-            options: {},
+            options: {
+              sides: 6,
+              turnSteps: 30,
+              angle: 30,
+            },
           },
           outModes: {
             default: 'out',
@@ -503,35 +439,6 @@ const IndexBackground = (props) => {
         },
         stroke: {
           width: 0,
-          color: {
-            value: '#ffffff',
-            animation: {
-              h: {
-                count: 0,
-                enable: false,
-                offset: 0,
-                speed: 1,
-                decay: 0,
-                sync: true,
-              },
-              s: {
-                count: 0,
-                enable: false,
-                offset: 0,
-                speed: 1,
-                decay: 0,
-                sync: true,
-              },
-              l: {
-                count: 0,
-                enable: false,
-                offset: 0,
-                speed: 1,
-                decay: 0,
-                sync: true,
-              },
-            },
-          },
         },
         zIndex: {
           random: {
@@ -544,7 +451,7 @@ const IndexBackground = (props) => {
           velocityRate: 1,
         },
         life: {
-          count: 1,
+          count: 0,
           delay: {
             random: {
               enable: false,
@@ -674,11 +581,138 @@ const IndexBackground = (props) => {
       zLayers: 100,
       emitters: [],
     };
+    console.log('hello');
+    // return {
+    //   fpsLimit: 60,
+    //   backgroundMode: {
+    //     enable: true,
+    //     zIndex: 0,
+    //   },
+    //   particles: {
+    //     number: {
+    //       value: 180,
+    //       density: {
+    //         enable: true,
+    //         area: 800,
+    //       },
+    //     },
+    //     color: {
+    //       value: '#ff0000',
+    //       animation: {
+    //         enable: true,
+    //         speed: 20,
+    //         sync: true,
+    //       },
+    //     },
+    //     shape: {
+    //       type: 'circle',
+    //       options: {
+    //         polygon: {
+    //           sides: 5,
+    //         },
+    //         image: {
+    //           src: 'https://cdn.matteobruni.it/images/particles/github.svg',
+    //           width: 100,
+    //           height: 100,
+    //         },
+    //       },
+    //     },
+    //     stroke: {
+    //       width: 0,
+    //     },
+    //     opacity: {
+    //       value: 0.5,
+    //       random: false,
+    //       animation: {
+    //         enable: false,
+    //         speed: 3,
+    //         minimumValue: 0.1,
+    //         sync: false,
+    //       },
+    //     },
+    //     size: {
+    //       value: 3,
+    //       random: true,
+    //       animation: {
+    //         enable: false,
+    //         speed: 20,
+    //         minimumValue: 0.1,
+    //         sync: false,
+    //       },
+    //     },
+    //     links: {
+    //       enable: true,
+    //       distance: 100,
+    //       color: '#ffffff',
+    //       opacity: 0.4,
+    //       width: 1,
+    //     },
+    //     move: {
+    //       enable: true,
+    //       speed: 6,
+    //       direction: 'none',
+    //       random: false,
+    //       straight: false,
+    //       outMode: 'out',
+    //       attract: {
+    //         enable: false,
+    //         rotateX: 600,
+    //         rotateY: 1200,
+    //       },
+    //     },
+    //   },
+    //   interactivity: {
+    //     detectsOn: 'canvas',
+    //     events: {
+    //       onHover: {
+    //         enable: true,
+    //         mode: 'repulse',
+    //       },
+    //       onClick: {
+    //         enable: true,
+    //         mode: 'push',
+    //       },
+    //       resize: true,
+    //     },
+    //     modes: {
+    //       grab: {
+    //         distance: 400,
+    //         links: {
+    //           opacity: 1,
+    //         },
+    //       },
+    //       bubble: {
+    //         distance: 400,
+    //         size: 40,
+    //         duration: 2,
+    //         opacity: 0.8,
+    //       },
+    //       repulse: {
+    //         distance: 200,
+    //       },
+    //       push: {
+    //         quantity: 4,
+    //       },
+    //       remove: {
+    //         quantity: 2,
+    //       },
+    //     },
+    //   },
+    //   detectRetina: true,
+    //   background: {
+    //     color: '#000000',
+    //     image:
+    //       'https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80',
+    //     position: '50% 50%',
+    //     repeat: 'no-repeat',
+    //     size: 'cover',
+    //   },
+    // };
   }, []);
 
   const particlesInit = useCallback((engine) => {
-    loadSlim(engine);
-    loadFull(engine); // for this sample the slim version is enough, choose whatever you prefer, slim is smaller in size but doesn't have all the plugins and the mouse trail feature
+    // loadSlim(engine); // Doesn't have mouse trail
+    loadFull(engine);
   }, []);
 
   return <Particles id={props.id} init={particlesInit} options={options} />;

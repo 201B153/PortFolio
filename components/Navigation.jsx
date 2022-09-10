@@ -1,7 +1,11 @@
-// import React, { useState, useEffect } from 'react';
-// // import { Link } from "react-router-dom";
-
-// // import { greetings, socialLinks } from "../portfolio";
+// import React, { useEffect, useState } from 'react';
+// import { makeStyles } from '@material-ui/core/styles';
+// import AppBar from '@material-ui/core/AppBar';
+// import Toolbar from '@material-ui/core/Toolbar';
+// import Typography from '@material-ui/core/Typography';
+// import Button from '@material-ui/core/Button';
+// import IconButton from '@material-ui/core/IconButton';
+// import MenuIcon from '@material-ui/icons/Menu';
 // import Headroom from 'headroom.js';
 // import Link from 'next/link';
 // import {
@@ -15,35 +19,9 @@
 //   Row,
 //   Col,
 // } from 'reactstrap';
-
-// const greetings = {
-//   name: '201b153',
-//   title: "Hii 👋, I'm Mayank Singh Tomar",
-//   description: "I'm passionate Full Stack web developer.",
-//   resumeLink:
-//     'https://drive.google.com/file/d/1Jj4QvvMMhRZQrxngrvlhmuTLhgcisaAp/view?usp=sharing',
-// };
-
-// const socialLinks = {
-//   instagram: 'https://www.instagram.com/mstomar698/',
-//   github: 'https://github.com/201b153',
-//   linkedin: 'https://www.linkedin.com/in/mayank-tomar-726187205/',
-// };
-
 // const Navigation = () => {
-//   const [collapseClasses, setCollapseClasses] = useState('');
-//   const onExiting = () => setCollapseClasses('collapsing-out');
-
-//   const onExited = () => setCollapseClasses('');
-
-//   useEffect(() => {
-//     let headroom = new Headroom(document.getElementById('navbar-main'));
-//     // initialise
-//     headroom.init();
-//   });
-
 //   return (
-//     <>
+//     <div className={classes.root}>
 //       <header className="header-global">
 //         <Navbar
 //           className="navbar-main navbar-transparent navbar-light headroom"
@@ -63,13 +41,7 @@
 //             >
 //               <span className="navbar-toggler-icon" />
 //             </button>
-//             <UncontrolledCollapse
-//               toggler="#navbar_global"
-//               navbar
-//               className={collapseClasses}
-//               onExiting={onExiting}
-//               onExited={onExited}
-//             >
+//
 //               <div className="navbar-collapse-header">
 //                 <Row>
 //                   <Col className="collapse-brand" xs="6">
@@ -167,78 +139,435 @@
 //                   </NavItem>
 //                 )}
 //               </Nav>
-//             </UncontrolledCollapse>
+//
 //           </Container>
 //         </Navbar>
 //       </header>
-//     </>
+//     </div>
 //   );
 // };
 
 // export default Navigation;
-import React, { useEffect, useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
+import { styled, useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import MuiAppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import CssBaseline from '@mui/material/CssBaseline';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+// import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+// import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+// import InboxIcon from '@mui/icons-material/MoveToInbox';
+// import MailIcon from '@mui/icons-material/Mail';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import CloseIcon from '@mui/icons-material/Close';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import CoffeeIcon from '@mui/icons-material/Coffee';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import NightlightIcon from '@mui/icons-material/Nightlight';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
+// const greetings = {
+//   name: '201b153',
+//   title: "Hii 👋, I'm Mayank Singh Tomar",
+//   description: "I'm passionate Full Stack web developer.",
+//   resumeLink:
+//     'https://drive.google.com/file/d/1Jj4QvvMMhRZQrxngrvlhmuTLhgcisaAp/view?usp=sharing',
+// };
+
+// const socialLinks = {
+//   instagram: 'https://www.instagram.com/mstomar698/',
+//   github: 'https://github.com/201b153',
+//   linkedin: 'https://www.linkedin.com/in/mayank-tomar-726187205/',
+// };
+
+const drawerWidth = 220;
+const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
+  ({ theme, open }) =>
+    Object.assign(
+      {
         flexGrow: 1,
+        padding: theme.spacing(3),
+        transition: theme.transitions.create('margin', {
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.leavingScreen,
+        }),
+        marginRight: -drawerWidth,
+      },
+      open && {
+        transition: theme.transitions.create('margin', {
+          easing: theme.transitions.easing.easeOut,
+          duration: theme.transitions.duration.enteringScreen,
+        }),
+        marginRight: 0,
+      }
+    )
+);
+const AppBar = styled(MuiAppBar, {
+  shouldForwardProp: (prop) => prop !== 'open',
+})(({ theme, open }) =>
+  Object.assign(
+    {
+      transition: theme.transitions.create(['margin', 'width'], {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      }),
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
-        color: 'black'
-    },
-    title: {
-        flexGrow: 1,
-        color: 'black'
-    },
-    appBarTransparent: {
-        backgroundColor: 'rgba(67, 129, 168,0.5)'
-    },
-    appBarSolid: {
-        backgroundColor: 'rgba(67, 129, 168)'
+    open && {
+      width: `calc(100% - ${drawerWidth}px)`,
+      transition: theme.transitions.create(['margin', 'width'], {
+        easing: theme.transitions.easing.easeOut,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+      marginRight: drawerWidth,
     }
+  )
+);
+const DrawerHeader = styled('div')(({ theme }) =>
+  Object.assign(
+    Object.assign(
+      { display: 'flex', alignItems: 'center', padding: theme.spacing(0, 1) },
+      theme.mixins.toolbar
+    ),
+    { justifyContent: 'flex-start' }
+  )
+);
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    color: '#fff',
+    alignSelf: 'left',
+  },
+  title: {
+    flexGrow: 1,
+    color: '#fff',
+  },
+  subtitle: {
+    flexGrow: 1,
+    color: '#000',
+  },
+  appBarTransparent: {
+    backgroundColor: 'transparent',
+  },
+  appBarSolid: {
+    backgroundColor: '#000000',
+  },
 }));
-
 export default function Navigation() {
-    const classes = useStyles();
-
-    const [navBackground, setNavBackground] = useState('appBarTransparent')
-    const navRef = React.useRef()
-    navRef.current = navBackground
-    useEffect(() => {
-        const handleScroll = () => {
-            const show = window.scrollY > 310
-            if (show) {
-                setNavBackground('appBarSolid')
-            } else {
-                setNavBackground('appBarTransparent')
-            }
-        }
-        document.addEventListener('scroll', handleScroll)
-        return () => {
-            document.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
-
-    return (
-        <div className={classes.root}>
-            <AppBar position="fixed" className={classes[navRef.current]}>
-                <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" className={classes.title}>
-                        News
-          </Typography>
-                    <Button color="black">Login</Button>
-                </Toolbar>
-            </AppBar>
-        </div >
-    );
+  const classes = useStyles();
+  const theme = useTheme();
+  const [open, setOpen] = React.useState(false);
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+  const handleMode = () => {
+    setOpen(false);
+  };
+  const [navBackground, setNavBackground] = useState('appBarTransparent');
+  const navRef = React.useRef();
+  navRef.current = navBackground;
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 310;
+      if (show) {
+        setNavBackground('appBarSolid');
+      } else {
+        setNavBackground('appBarTransparent');
+      }
+    };
+    document.addEventListener('scroll', handleScroll);
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  return React.createElement(
+    Box,
+    { sx: { display: 'flex' } },
+    React.createElement(CssBaseline, null),
+    React.createElement(
+      AppBar,
+      { position: 'fixed', className: classes[navRef.current] },
+      React.createElement(
+        Toolbar,
+        null,
+        React.createElement(
+          Typography,
+          { variant: 'h6', className: classes.title },
+          'Mayank Singh Tomar'
+        ),
+        React.createElement(
+          IconButton,
+          {
+            color: 'inherit',
+            'aria-label': 'open drawer',
+            edge: 'end',
+            onClick: handleDrawerOpen,
+            sx: Object.assign({}, open && { display: 'none' }),
+          },
+          React.createElement(MenuIcon, null)
+        )
+      )
+    ),
+    React.createElement(
+      Main,
+      { open: open },
+      React.createElement(DrawerHeader, null)
+    ),
+    React.createElement(
+      Drawer,
+      {
+        sx: {
+          width: drawerWidth,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+          },
+        },
+        variant: 'persistent',
+        anchor: 'right',
+        open: open,
+      },
+      React.createElement(
+        DrawerHeader,
+        null,
+        React.createElement(
+          IconButton,
+          { onClick: handleDrawerClose },
+          theme.direction === 'rtl'
+            ? React.createElement(CloseIcon, null)
+            : React.createElement(CloseIcon, null)
+        ),
+        React.createElement(
+          IconButton,
+          { onClick: handleMode },
+          theme.direction === 'rtl'
+            ? React.createElement(NightlightIcon, null)
+            : React.createElement(LightModeIcon, null)
+        ),
+        React.createElement(
+          IconButton,
+          { onClick: handleMode },
+          theme.direction === 'rtl'
+            ? React.createElement(LightModeIcon, null)
+            : React.createElement(NightlightIcon, null)
+        ),
+        React.createElement(
+          IconButton,
+          { onClick: handleMode },
+          React.createElement(
+            Typography,
+            { variant: 'h6', className: classes.subtitle },
+            '201b153'
+          )
+          // theme.direction === 'rtl'
+          //   ? React.createElement(
+          //       Typography,
+          //       { variant: 'h6', className: classes.subtitle },
+          //       '201b153'
+          //     )
+          //   : React.createElement(
+          //       Typography,
+          //       { variant: 'h6', className: classes.title },
+          //       '201b153'
+          //     )
+        )
+      ),
+      React.createElement(Divider, null),
+      React.createElement(
+        List,
+        null,
+        ['About Me'].map((text, index) =>
+          React.createElement(
+            ListItem,
+            { key: text, disablePadding: true },
+            React.createElement(
+              ListItemButton,
+              null,
+              React.createElement(
+                ListItemIcon,
+                null,
+                index % 2 === 0
+                  ? React.createElement(
+                      IconButton,
+                      null,
+                      React.createElement(PersonOutlineIcon, null)
+                    )
+                  : React.createElement(
+                      IconButton,
+                      null,
+                      React.createElement(PersonOutlineIcon, null)
+                    )
+              ),
+              React.createElement(
+                'a',
+                {
+                  href: 'https://201b153.blogspot.com/2022/09/mayank-singh-tomar-201b153.html',
+                },
+                React.createElement(ListItemText, { primary: text })
+              )
+            )
+          )
+        )
+      ),
+      React.createElement(Divider, null),
+      React.createElement(
+        List,
+        null,
+        ['Reach Me'].map((text, index) =>
+          React.createElement(
+            ListItem,
+            { key: text, disablePadding: true },
+            React.createElement(
+              ListItemButton,
+              null,
+              React.createElement(
+                ListItemIcon,
+                null,
+                index % 2 === 0
+                  ? React.createElement(
+                      IconButton,
+                      null,
+                      React.createElement(ConnectWithoutContactIcon, null)
+                    )
+                  : React.createElement(
+                      IconButton,
+                      null,
+                      React.createElement(PersonOutlineIcon, null)
+                    )
+              ),
+              React.createElement(
+                'a',
+                { href: '#' },
+                React.createElement(ListItemText, { primary: text })
+              )
+            )
+          )
+        )
+      ),
+      React.createElement(Divider, null),
+      React.createElement(
+        List,
+        null,
+        ['LinkedIn'].map((text, index) =>
+          React.createElement(
+            ListItem,
+            { key: text, disablePadding: true },
+            React.createElement(
+              ListItemButton,
+              null,
+              React.createElement(
+                ListItemIcon,
+                null,
+                index % 2 === 0
+                  ? React.createElement(
+                      IconButton,
+                      null,
+                      React.createElement(LinkedInIcon, null)
+                    )
+                  : React.createElement(
+                      IconButton,
+                      null,
+                      React.createElement(LinkedInIcon, null)
+                    )
+              ),
+              React.createElement(
+                'a',
+                { href: 'https://www.linkedin.com/in/mayank-tomar-726187205/' },
+                React.createElement(ListItemText, { primary: text })
+              )
+            )
+          )
+        )
+      ),
+      React.createElement(Divider, null),
+      React.createElement(
+        List,
+        null,
+        ['GitHub'].map((text, index) =>
+          React.createElement(
+            ListItem,
+            { key: text, disablePadding: true },
+            React.createElement(
+              ListItemButton,
+              null,
+              React.createElement(
+                ListItemIcon,
+                null,
+                index % 2 === 0
+                  ? React.createElement(
+                      IconButton,
+                      null,
+                      React.createElement(GitHubIcon, null)
+                    )
+                  : React.createElement(
+                      IconButton,
+                      null,
+                      React.createElement(GitHubIcon, null)
+                    )
+              ),
+              React.createElement(
+                'a',
+                { href: 'https://github.com/201b153' },
+                React.createElement(ListItemText, { primary: text })
+              )
+            )
+          )
+        )
+      ),
+      React.createElement(Divider, null),
+      React.createElement(
+        List,
+        null,
+        ['Buy me Coffee'].map((text, index) =>
+          React.createElement(
+            ListItem,
+            { key: text, disablePadding: true },
+            React.createElement(
+              ListItemButton,
+              null,
+              React.createElement(
+                ListItemIcon,
+                null,
+                index % 2 === 0
+                  ? React.createElement(
+                      IconButton,
+                      null,
+                      React.createElement(CoffeeIcon, null)
+                    )
+                  : React.createElement(
+                      IconButton,
+                      null,
+                      React.createElement(CoffeeIcon, null)
+                    )
+              ),
+              React.createElement(
+                'a',
+                { href: 'https://www.buymeacoffee.com/201b153' },
+                React.createElement(ListItemText, { primary: text })
+              )
+            )
+          )
+        )
+      ),
+      React.createElement(Divider, null)
+    )
+  );
 }

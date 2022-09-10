@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import { Fade } from 'react-reveal';
+import { Badge } from 'reactstrap';
 // import Table from 'react-bootstrap/Table';
 
 const Proficiency = () => {
@@ -9,13 +10,16 @@ const Proficiency = () => {
       <Fade bottom duration={2000}>
         <div className="pl-4">
           <h4 className="display-3 text-white">🌍 Proficiency</h4>
-          <br/>
+          <br />
         </div>
         <MDBRow>
           <MDBCol size="4">
             <div className="box">
               <div className="proficiency-topic">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MERN
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Badge color="info" className="mr-1">
+                  MERN
+                </Badge>
               </div>
               <div className="green">
                 <div className="progress">
@@ -33,7 +37,10 @@ const Proficiency = () => {
           <MDBCol size="4">
             <div className="box">
               <div className="proficiency-topic">
-                &nbsp;&nbsp;&nbsp;&nbsp;BlockChain
+                &nbsp;
+                <Badge color="info" className="mr-1">
+                  BlockChain
+                </Badge>
               </div>
               <div className="orange">
                 <div className="progress">
@@ -51,7 +58,10 @@ const Proficiency = () => {
           <MDBCol size="4">
             <div className="box">
               <div className="proficiency-topic">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rust
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Badge color="info" className="mr-1">
+                  Rust
+                </Badge>
               </div>
               <div className="green">
                 <div className="progress">
@@ -69,7 +79,10 @@ const Proficiency = () => {
           <MDBCol size="4">
             <div className="box">
               <div className="proficiency-topic">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cloud
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Badge color="info" className="mr-1">
+                  Cloud
+                </Badge>
               </div>
               <div className="green">
                 <div className="progress">
@@ -87,7 +100,10 @@ const Proficiency = () => {
           <MDBCol size="4">
             <div className="box">
               <div className="proficiency-topic">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CP
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Badge color="info" className="mr-1">
+                  CP
+                </Badge>
               </div>
               <div className="orange">
                 <div className="progress">
@@ -105,7 +121,10 @@ const Proficiency = () => {
           <MDBCol size="4">
             <div className="box">
               <div className="proficiency-topic">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kali
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Badge color="info" className="mr-1">
+                  Kali
+                </Badge>
               </div>
               <div className="green">
                 <div className="progress">

@@ -1,6 +1,6 @@
 module.exports = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   experimental: {
-    nextScriptWorkers: true,
+    nextScriptWorkers: false,
   },
 };

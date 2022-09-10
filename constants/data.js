@@ -2,9 +2,8 @@ const userData = {
   githubUsername: "201b153",
   name: ">>",
   designation: "Full-Stack Developer",
-  // avatarUrl: "/avatar.png",
   email: ">>",
-  phone: "+91 ...",
+  phone: "+91 62651807023",
   address: "India.",
   projects: [
     {

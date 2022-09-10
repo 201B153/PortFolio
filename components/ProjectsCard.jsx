@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Card, CardBody, Col, Button } from 'reactstrap';
+import { Card, CardBody, Col, Button, Badge } from 'reactstrap';
 
 import { Fade } from 'react-reveal';
 
@@ -12,7 +12,11 @@ const ProjectsCard = ({ data }) => {
           <CardBody className="bg-card">
             <div className="d-flex px-3">
               <div className="pl-4">
-                <h3>{data.name}</h3>
+                <h3>
+                  <Badge color="info" className="mr-1">
+                    {data.name}
+                  </Badge>
+                </h3>
                 <p className="description mt-3">{data.desc}</p>
                 {data.github ? (
                   <Button
@@ -40,7 +44,9 @@ const ProjectsCard = ({ data }) => {
                     <span className="btn-inner--icon">
                       <i className="fa fa-arrow-right mr-2" />
                     </span>
-                    <span className="nav-link-inner--text ml-1">Project-Link</span>
+                    <span className="nav-link-inner--text ml-1">
+                      Project-Link
+                    </span>
                   </Button>
                 ) : null}
               </div>

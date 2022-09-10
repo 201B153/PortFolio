@@ -17,15 +17,15 @@ const openSource = {
 export default function Home({ githubProfileData }) {
   return (
     <div>
-    <Navigation />
-    <Greetings />
-    <Skills />
-    <Proficiency />
-    <Education />
-    <Experience />
-    <Projects />
-    <IndexBackground id="tsparticles" />
-    <GithubProfileCard prof={githubProfileData} />
+      <Navigation />
+      <Greetings />
+      <Skills />
+      <Proficiency />
+      <Education />
+      <Experience />
+      <Projects />
+      <IndexBackground id="tsparticles" />
+      <GithubProfileCard prof={githubProfileData} />
     </div>
   );
 }

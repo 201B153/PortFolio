@@ -1,16 +1,17 @@
-/* body > div:first-child {
+body > div:first-child {
 	overflow-x: hidden;
-} */
+}
 
 
 /* for icons */
 .media-icons a{
 	color:var(--primary-color);
-	font-size: 38px;
+	font-size: 45px;
 	margin:0 6px;
   }  
 .media-icons a:hover {
-	/* background-color: #7a0b0b; */
+	background-color: transparent;
+  opacity: 1;
   }
 /* for icons */
 

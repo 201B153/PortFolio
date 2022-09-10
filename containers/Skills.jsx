@@ -1,15 +1,15 @@
 import { Icon } from '@iconify/react';
 import React, { Fragment } from 'react';
 import { Fade } from 'react-reveal';
-import { Col, Container, Row, UncontrolledTooltip } from 'reactstrap';
+import { Col, Container, Row, UncontrolledTooltip, Badge } from 'reactstrap';
 import DisplayLottie from '../components/DisplayLottie';
 import emoji from 'react-easy-emoji';
 // Effects
 //import SkillBackGround from './SkillBackGround.jsx';
 
 const skillsSection = {
-  title: 'Skils I have',
-  subTitle: 'FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK',
+  title: 'SKILLS',
+  subTitle: '___________________',
   data: [
     {
       title: 'Full-Stack Development',
@@ -149,7 +149,11 @@ const Skills = () => {
             </Col>
             <Col lg="6" className="order-1 order-lg-2">
               <Fade right duration={2000}>
-                <h3 className="h3 mb-2">{section.title}</h3>
+                <h3 className="h3 mb-2">
+                  <Badge color="info" className="mr-1">
+                    {section.title}
+                  </Badge>
+                </h3>
                 <div className="d-flex justify-content-center flex-wrap mb-2">
                   {section.softwareSkills.map((skill, i) => {
                     return (
