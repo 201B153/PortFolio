@@ -7,7 +7,7 @@ const EducationCard = ({ education }) => {
   return (
     <Fade left duration={2000}>
       <Card className="card-lift--hover  shadow mt-4">
-        <CardBody className='background-201b153'>
+        <CardBody className='bg-card'>
           <div className="d-flex px-3 ">
             <div className="pl-4">
               <h5 className="text-info">{education.schoolName}</h5>

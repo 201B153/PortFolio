@@ -1,12 +1,4 @@
 import PropTypes from 'prop-types';
-import userData from '@constants/data';
-//
-// import { Particles } from 'react-particles';
-// import { tsParticles, loadFull } from 'tsparticles-engine';
-// import { useCallback } from 'react';
-//
-// import ParticleArea from '../components/ParticleArea.jsx';
-//
 import Navigation from '../components/Navigation.jsx';
 import Greetings from 'containers/Greetings.jsx';
 import Proficiency from 'containers/Proficiency';
@@ -15,25 +7,25 @@ import Education from 'containers/Education';
 import Experience from 'containers/Experience';
 import Projects from 'containers/Projects';
 import GithubProfileCard from '@components/GithubProfileCard';
+// Effects
+import IndexBackground from './IndexBackground.jsx';
 
 const openSource = {
   githubUserName: '201b153',
 };
 
 export default function Home({ githubProfileData }) {
-  //console.log(githubProfileData);
-
-  //
   return (
-    <div className="background-section">
-      <Navigation />
-      <Greetings />
-      <Skills />
-      <Proficiency />
-      <Education />
-      <Experience />
-      <Projects />
-      <GithubProfileCard prof={githubProfileData} />
+    <div>
+    <Navigation />
+    <Greetings />
+    <Skills />
+    <Proficiency />
+    <Education />
+    <Experience />
+    <Projects />
+    <IndexBackground id="tsparticles" />
+    <GithubProfileCard prof={githubProfileData} />
     </div>
   );
 }

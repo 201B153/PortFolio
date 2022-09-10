@@ -17,7 +17,7 @@ const GreetingLottie = ({ animationPath }) => {
   );
 };
 
-const lottieMaker = ({ animation }) => {
+const LottieMaker = ({ animation }) => {
   let animations = {
     animationData,
     codingAnimation,
@@ -34,4 +34,4 @@ const lottieMaker = ({ animation }) => {
 };
 
 export default GreetingLottie;
-lottieMaker;
+LottieMaker;

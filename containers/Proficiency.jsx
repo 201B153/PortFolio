@@ -1,14 +1,15 @@
 import React from 'react';
 import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import { Fade } from 'react-reveal';
+// import Table from 'react-bootstrap/Table';
 
 const Proficiency = () => {
   return (
-    <MDBContainer className="background-201b153 section section-lg">
+    <MDBContainer className="bg-prof section section-lg">
       <Fade bottom duration={2000}>
-        <h1 className="proficiency-topic-heading">
-          <strong>&nbsp;&nbsp;🌍 Proficiency</strong>
-        </h1>
+        <div className="pl-4">
+          <h4 className="display-3 text-white">🌍 Proficiency</h4>
+        </div>
         <MDBRow>
           <MDBCol size="4">
             <div className="box">
@@ -37,7 +38,7 @@ const Proficiency = () => {
                 <div className="progress">
                   <div className="inner">
                     <div className="percent">
-                      <span>&nbsp;&nbsp;50</span>%
+                      <span>&nbsp;&nbsp;60</span>%
                     </div>
                     <div className="water"></div>
                     <div className="glare"></div>
@@ -49,7 +50,7 @@ const Proficiency = () => {
           <MDBCol size="4">
             <div className="box">
               <div className="proficiency-topic">
-                &nbsp;&nbsp;&nbsp;&nbsp;Rust
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rust
               </div>
               <div className="green">
                 <div className="progress">
@@ -69,11 +70,11 @@ const Proficiency = () => {
               <div className="proficiency-topic">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cloud
               </div>
-              <div className="orange">
+              <div className="green">
                 <div className="progress">
                   <div className="inner">
                     <div className="percent">
-                      <span>&nbsp;&nbsp;45</span>%
+                      <span>&nbsp;&nbsp;70</span>%
                     </div>
                     <div className="water"></div>
                     <div className="glare"></div>

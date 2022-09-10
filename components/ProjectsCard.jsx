@@ -9,7 +9,7 @@ const ProjectsCard = ({ data }) => {
     <Col lg="6">
       <Fade bottom duration={2000}>
         <Card className="shadow-lg--hover shadow mt-4">
-          <CardBody className="background-201b153">
+          <CardBody className="bg-card">
             <div className="d-flex px-3">
               <div className="pl-4">
                 <h3>{data.name}</h3>

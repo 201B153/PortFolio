@@ -19,7 +19,7 @@ const ExperienceCard = ({ data }) => {
 					style={{ flex: 1 }}
 					className="shadow-lg--hover mb-3 shadow border-0 text-center rounded"
 				>
-					<CardBody className="background-201b153">
+					<CardBody className="bg-card">
 						<img
 							src={data.companylogo}
 							style={{

@@ -1,6 +1,6 @@
-body > div:first-child {
+/* body > div:first-child {
 	overflow-x: hidden;
-}
+} */
 
 
 /* for icons */
@@ -10,32 +10,40 @@ body > div:first-child {
 	margin:0 6px;
   }  
 .media-icons a:hover {
-	background-color: #7a0b0b;
+	/* background-color: #7a0b0b; */
   }
 /* for icons */
 
 /* Threejs for sections each */
-/* section-background */
-.background-section {
-	background-color: rgb(69, 21, 21);
+#particles-js {
+  background: radial-gradient(circle, rgba(193, 196, 209, 1) 0%,
+  rgba(3, 3, 29, 1) 100%);
+  height: auto;
 }
-.background-greetings-section {
-	background-color: rgb(69, 219, 21);
-}
-/* card-background */
-.background-201b153 {
-	background-color: rgb(169, 231, 231);
-}
-/* Threejs for sections each */
 
-/* section  To be filled later */
-
+/*  */
+/* All BG code */
+.bg-skill {
+  background-color: #fff;
+  opacity: 6.2123;
+}
+.bg-prof {
+  background-color: transparent;
+  
+}
+.bg-card {
+  background-color: #fff;
+}
+.bg-git {
+  background-color: trasnparent;
+  height: auto;
+} 
 /* proficiency-topic-heading */
-.proficiency-topic-heading {
+/* .proficiency-topic-heading {
 	font-size: 42px;
-}
+} */
 .proficiency-topic {
-	color: #7a0b0b;
+	color: #fff;
 	font-size: large;
 }
 /* proficiency-topic-heading */
@@ -59,12 +67,18 @@ body > div:first-child {
 .icon-btn {
 	background-color: black;
 }
+
 /* git-card-section */
 
-
+/* This Part is copied */
 /* new style */
+.box {
+  align-items: center;
+  align-content: center;
+}
 .green {
 	margin-top: 20px;
+  text-align: center;
   }
   .green .progress,
   .red .progress,

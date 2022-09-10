@@ -25,13 +25,12 @@
     "nouislider": "^15.2.0",
     "prop-types": "^15.7.2",
     "react": "17.x",
+    "react-bootstrap": "^2.5.0",
     "react-datetime": "^3.0.4",
     "react-dom": "17.x",
     "react-easy-emoji": "^1.5.0",
     "react-headroom": "^3.1.1",
     "react-lottie": "^1.2.3",
-    "react-particles": "^2.2.4",
-    "react-particles-js": "^3.6.0",
     "react-reveal": "^1.2.2",
     "react-rough-notation": "^1.0.1",
     "react-scripts": "^4.0.3",
@@ -39,7 +38,8 @@
     "react-typist": "^2.0.5",
     "reactstrap": "^8.9.0",
     "sharp": "^0.29.1",
-    "tsparticles-engine": "^2.2.4"
+    "tsparticles": "^2.2.4",
+    "tsparticles-slim": "^2.2.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",

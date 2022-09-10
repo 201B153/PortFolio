@@ -4,7 +4,8 @@ import { Fade } from 'react-reveal';
 import { Col, Container, Row, UncontrolledTooltip } from 'reactstrap';
 import DisplayLottie from '../components/DisplayLottie';
 import emoji from 'react-easy-emoji';
-//import { skillsSection } from '../portfolio';
+// Effects
+//import SkillBackGround from './SkillBackGround.jsx';
 
 const skillsSection = {
   title: 'Skils I have',
@@ -92,9 +93,7 @@ const skillsSection = {
         emoji(
           '🌍 Building Scripts for automated testing & deployment of Smart Contracts using Infura'
         ),
-        emoji(
-          '🌍 Building Dapps with React.js & Next.js using Web3.js'
-        ),
+        emoji('🌍 Building Dapps with React.js & Next.js using Web3.js'),
       ],
       softwareSkills: [
         {
@@ -113,14 +112,12 @@ const skillsSection = {
     },
     {
       title: 'Cyber-Security & Ethical-Hacking',
-      lottieAnimationFile: '/lottie/skills/cybersecurity.json', // Path of Lottie Animation JSON File
+      lottieAnimationFile: '/lottie/skills/105091-cybersecurity.json', // Path of Lottie Animation JSON File
       skills: [
         emoji(
           '🌍 Building Scripts for automated testing & deployment of Smart Contracts using Infura'
         ),
-        emoji(
-          '🌍 Building Dapps with React.js & Next.js using Web3.js'
-        ),
+        emoji('🌍 Building Dapps with React.js & Next.js using Web3.js'),
       ],
       softwareSkills: [
         {
@@ -138,7 +135,8 @@ const skillsSection = {
 
 const Skills = () => {
   return (
-    <Container className="text-center my-5 section background-201b153 section-lg">
+    <Container className="text-center my-5 section bg-skill section-lg">
+      {/*<SkillBackGround id="tsparticles" />*/}
       <h1 className="h1">{skillsSection.title}</h1>
       <p className="lead">{skillsSection.subTitle}</p>
       {skillsSection.data.map((section, index) => {
