@@ -8,13 +8,14 @@ import SocialLinks from '../components/SocialLinks';
 
 const greetings = {
   name: '201b153',
-  title: "Hi👋, I'm Mayank Singh Tomar",
+  title: 'Hello 👋',
+  title2: "I'm Mayank Singh Tomar",
   description:
-    "I'm a passionate full-stack Web developer and a web app penetration tester.",
+    "I'm a passionate full-stack Web developer and a web app penetration tester from India.",
   description2:
-    'I love creating new web-apps and webpages using new techs and experimenting with them.',
+    'I am a tech enthusiast who love exploring new techs and find new ways to do things.',
   description3:
-    "I'm also an open source contributor and loves participating in hackathons.",
+    'I love Open source and mostly everything I learned is from the open source, i.e I like contributing on open source platforms.',
   resumeLink:
     'https://drive.google.com/file/d/1Jj4QvvMMhRZQrxngrvlhmuTLhgcisaAp/view?usp=sharing',
 };
@@ -55,6 +56,8 @@ const Greetings = () => {
               <Col lg="6">
                 <h1 className="display-3 text-white">
                   {greetings.title + ' '}
+                  <br />
+                  {greetings.title2 + ' '}
                 </h1>
                 <p className="lead text-white">
                   {greetings.description}
@@ -64,10 +67,9 @@ const Greetings = () => {
                   {greetings.description3}
                 </p>
                 <SocialLinks />
-                <div className="btn-wrapper my-4">
+                <div className="btn-hover btn-wrapper my-4">
                   <Button
-                    className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
-                    color="default"
+                    className="btn-hover btn-light btn-icon mb-3 mb-sm-0 ml-1"
                     href={greetings.resumeLink}
                   >
                     <span className="btn-inner--icon mr-1">

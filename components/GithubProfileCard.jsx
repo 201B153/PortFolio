@@ -11,7 +11,7 @@ const GithubProfileCard = ({ prof }) => {
               Thanks for reaching out. You can Conatct me
             </h5>
           </div>
-          <div className="d-flex justify-content-center">
+          <div className="footer-btn d-flex justify-content-center">
             <Button
               className="icon-btn shadow text-info"
               color="transparent"

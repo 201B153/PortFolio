@@ -1,11 +1,13 @@
-body > div:first-child {
+/* body > div:first-child {
 	overflow-x: hidden;
-}
+} */
 
 
 /* for icons */
 .media-icons a{
 	color:var(--primary-color);
+  background-color: #000;
+  opacity: 1.45;
 	font-size: 45px;
 	margin:0 6px;
   }  
@@ -13,8 +15,17 @@ body > div:first-child {
 	background-color: transparent;
   opacity: 1;
   }
-/* for icons */
+/* .cv-btn :hover {
+  background-color: red;
+} */
 
+/* .btn-inner--text {
+  color: red;
+} */
+/* for icons */
+.footer-btn {
+  background-color: #000;
+}
 /* navabar */
 
 /* navabar */
