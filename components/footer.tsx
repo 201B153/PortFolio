@@ -4,7 +4,6 @@ import { logo } from '../assets';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BsArrowUpSquare } from '@/constants';
-import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -42,12 +41,12 @@ const Footer = () => {
               mstomar698 &nbsp;
             </span>
             <span
-              className={`small_link sm:text-[16px] text-[14px] tracking-wider text-white`}
+              className={`small_link sm:text-[16px] text-[14px] tracking-wider text-secondary`}
             >
               Made with 💖 by{' '}
               <Link
                 href={'https://github.com/mstomar698'}
-                className="text-[#915EFF]"
+                className="text-white font-bold"
                 target="_blank"
               >
                 mstomar698 &nbsp;
@@ -65,7 +64,7 @@ const Footer = () => {
               repeat: Infinity,
               repeatType: 'loop',
             }}
-            className={`rounded-sm object-contain green-pink-gradient hover:shadow-2xl hover:shadow-purple-700 border-2 border-solid border-[#915EFF] z-20 ${
+            className={`rounded-sm object-contain hover:shadow-2xl hover:shadow-purple-700 z-20 ${
               scrolled ? 'fixed bottom-8 hover:bottom-10 right-6' : 'relative'
             }`}
             whileHover={{
@@ -78,7 +77,7 @@ const Footer = () => {
               onClick={() => {
                 window.scrollTo(0, 0);
               }}
-              className="green-pink-gradient text-3xl lg:text-5xl font-bold"
+              className="text-3xl lg:text-5xl font-bold"
             />
           </motion.div>
         </div>

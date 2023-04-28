@@ -30,15 +30,15 @@ const Social = () => {
             className="w-24 h-24 max-sm:h-16 max-sm:w-16 p-2"
             key={social.name}
           >
-            <div className="green-pink-gradient rounded-full p-2 shadowr-2xl shadow-purple-700 hover:shadow-xl hover:shadow-purple-700 border-2 border-solid border-[#915EFF]">
-              <Tilt>{social.logo}</Tilt>
+            <div className="|green-pink-gradient| rounded-full p-2 shadowr-2xl shadow-purple-700 hover:shadow-md hover:shadow-purple-700 |border border-solid border-[#915EFF]|">
+              <Tilt className="text-white">{social.logo}</Tilt>
             </div>
           </Link>
         ))}
       </div>
       <div className="mt-6 h-full flex justify-center items-center flex-row max-md:flex-col max-md:space-x-0 space-x-4">
         <p className={`text-sm my-2`}>Liked my work ?</p>
-        <Tilt className="green-pink-gradient  rounded-2xl p-2 hover:shadow-lg hover:shadow-purple-700 border-2 border-solid border-[#915EFF] w-[250px] h-[46px] flex flex-row">
+        <Tilt className="|green-pink-gradient| bg-[#151030] text-white rounded-2xl p-2 hover:shadow-md hover:shadow-purple-700 |border border-solid border-[#915EFF]| w-[250px] h-[46px] flex flex-row">
           <h2
             className={`text-center w-full text-xl flex flex-row justify-evenly`}
           >

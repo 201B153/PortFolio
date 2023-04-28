@@ -33,19 +33,20 @@ const Hero = () => {
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I&apos;m <span className="text-[#915EFF]">Mayank</span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              A <br className="sm:block hidden" />
-              <span className="text-[#915EFF] font-bold">
+            <p className={`${styles.heroSubText} mt-2`}>
+              <span className="text-secondary">A</span>
+              <br className="sm:block hidden" />
+              <span className="text-white font-bold">
                 Full-stack developer
               </span>{' '}
-              from India
+              <span className="text-secondary">from India</span>
             </p>
             <div
-              className={`text-black mt-4 lg:mt-8 h-[44px] max-sm:h-[40px] w-max lg:h-[80px] flex flex-row space-x-2 justify-evenly px-2 max-sm:px-0 max-md:px-1`}
+              className={` mt-4 lg:mt-8 h-[44px] max-sm:h-[40px] w-max lg:h-[80px] flex flex-row space-x-2 justify-evenly px-2 max-sm:px-0 max-md:px-1`}
             >
               {socialLinks.map((item, index) => (
                 <div key={item.id}>
-                  <Tilt className="border-2 border-solid border-[#915EFF] rounded-lg w-full h-full justify-center flex items-center hover:shadow-xl hover:shadow-purple-700 green-pink-gradient">
+                  <Tilt className="|border border-solid border-[#915EFF]| bg-[#151030] rounded-lg w-full h-full justify-center flex items-center hover:shadow-md hover:shadow-purple-700 |green-pink-gradient|">
                     <motion.div
                       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
                     >
@@ -56,7 +57,7 @@ const Hero = () => {
                       >
                         <div className="flex flex-row h-full w-full text-center items-center justify-evenly p-1 space-x-2">
                           {item.icons}
-                          <span className={`${styles.heroSubText} text-black`}>
+                          <span className={`${styles.heroSubText}`}>
                             {item.name}
                           </span>
                         </div>
@@ -106,7 +107,7 @@ const Hero = () => {
               y: [0, 0, 0],
             }}
           >
-            <BsArrowDownSquare className="green-pink-gradient text-3xl lg:text-5xl font-bold" />
+            <BsArrowDownSquare className="|green-pink-gradient| text-3xl lg:text-5xl font-bold" />
           </motion.div>
         </a>
       </div>

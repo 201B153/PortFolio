@@ -26,7 +26,7 @@ const FSD_Proj = () => {
       <motion.div variants={textVariant(0.5)}>
         <p className={`${styles.sectionSubText}`}>Full-stack devlopement</p>
       </motion.div>
-      <div className="mt-4 p-4 rounded-lg shadow-inner shadow-[#915EFF]">
+      <div className="mt-4 p-4 rounded-lg hover:shadow-inner hover:shadow-[#915EFF]">
         <motion.div
           ref={carousel}
           whileTap={{ cursor: 'grabbing' }}

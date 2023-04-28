@@ -66,7 +66,7 @@ const socials = [
     link: 'https://github.com/mstomar698',
     logo: (
       <FaGithubAlt
-        className={`${styles.heroSubText} h-full w-full text-black`}
+        className={`${styles.heroSubText} h-full w-full`}
       />
     ),
   },
@@ -76,7 +76,7 @@ const socials = [
     link: 'https://www.linkedin.com/in/mayank-tomar-726187205/',
     logo: (
       <BsLinkedin
-        className={`${styles.heroSubText} h-full w-full text-black`}
+        className={`${styles.heroSubText} h-full w-full`}
       />
     ),
   },
@@ -85,7 +85,7 @@ const socials = [
     name: 'Twitter',
     link: 'https://twitter.com/tomarm698',
     logo: (
-      <BsTwitter className={`${styles.heroSubText} h-full w-full text-black`} />
+      <BsTwitter className={`${styles.heroSubText} h-full w-full`} />
     ),
   },
   {
@@ -94,7 +94,7 @@ const socials = [
     link: 'https://www.instagram.com/mstomar698',
     logo: (
       <FaInstagram
-        className={`${styles.heroSubText} h-full w-full text-black`}
+        className={`${styles.heroSubText} h-full w-full`}
       />
     ),
   },
@@ -104,7 +104,7 @@ const socials = [
     link: 'https://www.facebook.com/profile.php?id=100052845513759',
     logo: (
       <FaFacebook
-        className={`${styles.heroSubText} h-full w-full text-black`}
+        className={`${styles.heroSubText} h-full w-full`}
       />
     ),
   },
@@ -113,7 +113,7 @@ const socials = [
     name: 'Discord',
     link: 'https://discord.gg/vZ39CpR6cf',
     logo: (
-      <FaDiscord className={`${styles.heroSubText} h-full w-full text-black`} />
+      <FaDiscord className={`${styles.heroSubText} h-full w-full`} />
     ),
   },
   {
@@ -121,7 +121,7 @@ const socials = [
     name: 'Mail',
     link: 'mailto:tomarm698@gmail.com',
     logo: (
-      <SiGmail className={`${styles.heroSubText} h-full w-full text-black`} />
+      <SiGmail className={`${styles.heroSubText} h-full w-full`} />
     ),
   },
   {
@@ -129,7 +129,7 @@ const socials = [
     name: 'YouTube',
     link: 'https://www.youtube.com/channel/UCUaTg45NXZYMPO37hkjWZGw',
     logo: (
-      <FaYoutube className={`${styles.heroSubText} h-full w-full text-black`} />
+      <FaYoutube className={`${styles.heroSubText} h-full w-full`} />
     ),
   },
   {
@@ -137,7 +137,7 @@ const socials = [
     name: 'Devpost',
     link: 'https://devpost.com/mstomar698',
     logo: (
-      <SiDevpost className={`${styles.heroSubText} h-full w-full text-black`} />
+      <SiDevpost className={`${styles.heroSubText} h-full w-full`} />
     ),
   },
   {
@@ -146,7 +146,7 @@ const socials = [
     link: 'https://www.hackerearth.com/@tomarm698',
     logo: (
       <SiHackerearth
-        className={`${styles.heroSubText} h-full w-full text-black`}
+        className={`${styles.heroSubText} h-full w-full`}
       />
     ),
   },
@@ -156,7 +156,7 @@ const socials = [
     link: 'https://leetcode.com/mstomar698/',
     logo: (
       <SiLeetcode
-        className={`${styles.heroSubText} h-full w-full text-black`}
+        className={`${styles.heroSubText} h-full w-full`}
       />
     ),
   },
@@ -166,7 +166,7 @@ const socials = [
     link: 'https://www.codechef.com/users/mayank201b153',
     logo: (
       <SiCodechef
-        className={`${styles.heroSubText} h-full w-full text-black`}
+        className={`${styles.heroSubText} h-full w-full`}
       />
     ),
   },
@@ -176,7 +176,7 @@ const socials = [
     link: 'https://codepen.io/mstomar698',
     logo: (
       <TbBrandCodepen
-        className={`${styles.heroSubText} h-full w-full text-black`}
+        className={`${styles.heroSubText} h-full w-full`}
       />
     ),
   },
@@ -186,7 +186,7 @@ const socials = [
     link: 'https://codesandbox.io/u/mstomar698',
     logo: (
       <TbBrandCodesandbox
-        className={`${styles.heroSubText} h-full w-full text-black`}
+        className={`${styles.heroSubText} h-full w-full`}
       />
     ),
   },
@@ -195,7 +195,7 @@ const socials = [
     name: 'blogger',
     link: 'https://www.blogger.com/profile/03052391752830080459',
     logo: (
-      <SiBlogger className={`${styles.heroSubText} h-full w-full text-black`} />
+      <SiBlogger className={`${styles.heroSubText} h-full w-full`} />
     ),
   },
   {
@@ -203,7 +203,7 @@ const socials = [
     name: 'DevTo',
     link: 'https://dev.to/mstomar698',
     logo: (
-      <FaDev className={`${styles.heroSubText} h-full w-full text-black`} />
+      <FaDev className={`${styles.heroSubText} h-full w-full`} />
     ),
   },
   // {
@@ -212,7 +212,7 @@ const socials = [
   //   link: 'https://medium.com/@tomarm698',
   //   logo: (
   //     <SiMedium
-  //       className={`${styles.heroSubText} h-full w-full text-black`}
+  //       className={`${styles.heroSubText} h-full w-full`}
   //     />
   //   ),
   // },
@@ -222,7 +222,7 @@ const socials = [
   //   link: 'https://github.com',
   //   logo: (
   //     <SiHashnode
-  //       className={`${styles.heroSubText} h-full w-full text-black`}
+  //       className={`${styles.heroSubText} h-full w-full`}
   //     />
   //   ),
   // },
@@ -232,7 +232,7 @@ const socials = [
   //   link: 'https://github.com',
   //   logo: (
   //     <SiPatreon
-  //       className={`${styles.heroSubText} h-full w-full text-black`}
+  //       className={`${styles.heroSubText} h-full w-full`}
   //     />
   //   ),
   // },
@@ -241,7 +241,7 @@ const socials = [
     name: 'Upwork',
     link: 'https://www.upwork.com/freelancers/~01bb1d053f82b69aab',
     logo: (
-      <SiUpwork className={`${styles.heroSubText} h-full w-full text-black`} />
+      <SiUpwork className={`${styles.heroSubText} h-full w-full`} />
     ),
   },
   {
@@ -250,7 +250,7 @@ const socials = [
     link: 'https://www.freelancer.in/u/Mstomar698',
     logo: (
       <SiFreelancer
-        className={`${styles.heroSubText} h-full w-full text-black`}
+        className={`${styles.heroSubText} h-full w-full`}
       />
     ),
   },
@@ -260,7 +260,7 @@ const socials = [
     link: 'https://www.fiverr.com/mayank_201b153',
     logo: (
       <TbBrandFiverr
-        className={`${styles.heroSubText} h-full w-full text-black`}
+        className={`${styles.heroSubText} h-full w-full`}
       />
     ),
   },
@@ -296,154 +296,154 @@ const socialLinks = [
 const technologies = [
   {
     name: 'HTML 5',
-    logo: <FaHtml5 className="h-full w-full text-black" />,
+    logo: <FaHtml5 className="h-full w-full " />,
     proficiency: '95%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'CSS 3',
-    logo: <FaCss3Alt className="h-full w-full text-black" />,
+    logo: <FaCss3Alt className="h-full w-full" />,
     proficiency: '95%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'JavaScript',
-    logo: <TbBrandJavascript className="h-full w-full text-black" />,
+    logo: <TbBrandJavascript className="h-full w-full" />,
     proficiency: '95%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'TypeScript',
-    logo: <TbBrandTypescript className="h-full w-full text-black" />,
+    logo: <TbBrandTypescript className="h-full w-full" />,
     proficiency: '80%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'React JS',
-    logo: <TbBrandReact className="h-full w-full text-black" />,
+    logo: <TbBrandReact className="h-full w-full" />,
     proficiency: '95%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Next JS',
-    logo: <TbBrandNextjs className="h-full w-full text-black" />,
+    logo: <TbBrandNextjs className="h-full w-full" />,
     proficiency: '90%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Redux Toolkit',
-    logo: <TbBrandRedux className="h-full w-full text-black" />,
+    logo: <TbBrandRedux className="h-full w-full" />,
     proficiency: '70%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Tailwind CSS',
-    logo: <TbBrandTailwind className="h-full w-full text-black" />,
+    logo: <TbBrandTailwind className="h-full w-full" />,
     proficiency: '98%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Node JS',
-    logo: <FaNode className="h-full w-full text-black" />,
+    logo: <FaNode className="h-full w-full" />,
     proficiency: '90%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'MongoDB',
-    logo: <TbBrandMongodb className="h-full w-full text-black" />,
+    logo: <TbBrandMongodb className="h-full w-full" />,
     proficiency: '90%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Redis',
-    logo: <SiRedis className="h-full w-full text-black" />,
+    logo: <SiRedis className="h-full w-full" />,
     proficiency: '90%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Three JS',
-    logo: <TbBrandThreejs className="h-full w-full text-black" />,
+    logo: <TbBrandThreejs className="h-full w-full" />,
     proficiency: '70%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Jest',
-    logo: <SiJest className="h-full w-full text-black" />,
+    logo: <SiJest className="h-full w-full" />,
     proficiency: '70%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'GO',
-    logo: <TbBrandGolang className="h-full w-full text-black" />,
+    logo: <TbBrandGolang className="h-full w-full" />,
     proficiency: '80%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Rust',
-    logo: <FaRust className="h-full w-full text-black" />,
+    logo: <FaRust className="h-full w-full" />,
     proficiency: '75%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Web Assembly',
-    logo: <SiWebassembly className="h-full w-full text-black" />,
+    logo: <SiWebassembly className="h-full w-full" />,
     proficiency: '70%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Solana',
-    logo: <TbCurrencySolana className="h-full w-full text-black" />,
+    logo: <TbCurrencySolana className="h-full w-full" />,
     proficiency: '75%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Kali',
-    logo: <SiKalilinux className="h-full w-full text-black" />,
+    logo: <SiKalilinux className="h-full w-full" />,
     proficiency: '70%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'Unreal',
-    logo: <SiUnrealengine className="h-full w-full text-black" />,
+    logo: <SiUnrealengine className="h-full w-full" />,
     proficiency: '65%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'git',
-    logo: <FaGithubAlt className="h-full w-full text-black" />,
+    logo: <FaGithubAlt className="h-full w-full" />,
     proficiency: '90%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'docker',
-    logo: <FaDocker className="h-full w-full text-black" />,
+    logo: <FaDocker className="h-full w-full" />,
     proficiency: '90%',
     width: 'w-32',
     bgColor: '#FF0000',
   },
   {
     name: 'figma',
-    logo: <TbBrandFigma className="h-full w-full text-black" />,
+    logo: <TbBrandFigma className="h-full w-full" />,
     proficiency: '90%',
     width: 'w-32',
     bgColor: '#FF0000',

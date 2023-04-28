@@ -174,10 +174,6 @@ const projects = {
           name: 'typescript',
           color: 'blue-text-gradient',
         },
-        {
-          name: 'Vitest',
-          color: 'black-text-gradient',
-        },
       ],
       image: t_master,
       source_code_link: 'https://github.com/mstomar698/t_master',
@@ -195,10 +191,6 @@ const projects = {
         {
           name: 'mongodb',
           color: 'green-text-gradient',
-        },
-        {
-          name: 'tailwind',
-          color: 'pink-text-gradient',
         },
         {
           name: 'chatgpt',
@@ -225,10 +217,6 @@ const projects = {
         {
           name: 'tailwind',
           color: 'pink-text-gradient',
-        },
-        {
-          name: 'github',
-          color: 'black-text-gradient',
         },
       ],
       image: onhandblogs,
@@ -269,10 +257,6 @@ const projects = {
         {
           name: 'nextjs',
           color: 'blue-text-gradient',
-        },
-        {
-          name: 'restapi',
-          color: 'green-text-gradient',
         },
         {
           name: 'restapi',
@@ -328,10 +312,6 @@ const projects = {
           color: 'blue-text-gradient',
         },
         {
-          name: 'wasm-pack',
-          color: 'green-text-gradient',
-        },
-        {
           name: 'rust',
           color: 'pink-text-gradient',
         },
@@ -343,7 +323,7 @@ const projects = {
     {
       name: 'DMail',
       description:
-        'An easy-to-use web platform where users can send and receive emails for web3 network with decryption at extreme secrecy over less delay.',
+        'An easy-to-use web platform where users can send and receive emails over web3 network with decryption at extreme secrecy with hexa decoding and less delay.',
       tags: [
         {
           name: 'solana',

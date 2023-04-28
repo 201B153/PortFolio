@@ -26,7 +26,7 @@ const Rust_Proj = () => {
       <motion.div variants={textVariant(0.5)}>
         <p className={`${styles.sectionSubText}`}>Rust Devlopment</p>
       </motion.div>
-      <div className="mt-4 p-4 rounded-lg shadow-inner shadow-[#915EFF]">
+      <div className="mt-4 p-4 rounded-lg hover:shadow-inner hover:shadow-[#915EFF]">
         <motion.div
           ref={carousel}
           whileTap={{ cursor: 'grabbing' }}

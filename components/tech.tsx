@@ -32,7 +32,7 @@ const Tech = () => {
             key={technology.name}
           >
             <div
-              className="green-pink-gradient rounded-full p-2 shadowr-2xl shadow-purple-700 hover:shadow-xl hover:shadow-purple-700 border-2 border-solid border-[#915EFF]"
+              className="|green-pink-gradient| rounded-full p-2 shadowr-inner hover:shadow-md hover:shadow-purple-700 |border border-solid border-[#915EFF]|"
               onClick={handleTechBubble}
             >
               <Tilt>{technology.logo}</Tilt>
@@ -40,9 +40,9 @@ const Tech = () => {
                 <Tilt>
                   <div className="absolute flex w-24 h-24 flex-row flex-wrap justify-center gap-10 max-sm:gap-12">
                     <div onClick={handleTechBubble}>
-                      <div className="absolute || top-[20px] right-[-17px] max-md:right-[-18px] max-sm:right-[14px] || w-36 max-sm:w-28 h-8 max-sm:h-10 || green-pink-gradient || rounded-full border-2 border-solid border-[#915EFF] || transition-transform transform-scale-0 hover:transform-scale-100 ">
-                        <div className="text-white h-full w-full rounded-full flex justify-center items-center overflow-hidden absolute shadow-lg shadow-gray-500 p-[1px]">
-                          <div className="flex flex-row max-sm:flex-col rounded-full space-x-2 max-sm:space-x-0  bg-tertiary w-full h-full justify-center items-center text-center opacity-100">
+                      <div className="absolute || top-[20px] right-[-17px] max-md:right-[-18px] max-sm:right-[14px] || w-36 max-sm:w-28 h-8 max-sm:h-10 || |green-pink-gradient| || rounded-full |border border-solid border-[#915EFF]| || transition-transform transform-scale-0 hover:transform-scale-100 ">
+                        <div className="text-white h-full w-full rounded-full flex justify-center items-center overflow-hidden absolute shadow-md shadow-purple-700 p-[1px]">
+                          <div className="flex flex-row max-sm:flex-col rounded-full space-x-2 max-sm:space-x-0  bg-[#151030] w-full h-full justify-center items-center text-center opacity-100">
                             <span className={`text-xs`}>
                               {technology.name}{' '}
                               <span className="max-sm:hidden">:</span>

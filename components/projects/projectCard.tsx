@@ -17,8 +17,8 @@ const ProjectCard = ({
 }: any) => {
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
-      <div className="bg-tertiary p-5 mx-2 rounded-2xl w-[360px] max-sm:w-[300px] active:shadow-xl active:shadow-[#915EFF]">
-        <Tilt className="relative w-full h-[230px] hover:shadow-xl hover:shadow-[#915EFF] rounded-2xl">
+      <div className="bg-tertiary p-5 mx-2 rounded-2xl h-[486px] max-sm:h-[450px] w-[360px] max-sm:w-[300px] active:shadow-sm active:shadow-[#915EFF]">
+        <Tilt className="relative w-full h-[240px] max-sm:h-[200px] hover:shadow-md hover:shadow-[#915EFF] rounded-2xl">
           <Image
             src={image}
             alt="project_image"
@@ -28,7 +28,7 @@ const ProjectCard = ({
             <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
               <div
                 onClick={() => window.open(source_code_link, '_blank')}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                className="bg-primary hover:shadow-md hover:shadow-[#915EFF] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
               >
                 <FaGithubAlt className="w-1/2 h-1/2 object-contain" />
               </div>
@@ -36,7 +36,7 @@ const ProjectCard = ({
             <div className="absolute inset-0 flex justify-end mt-14 mr-3 card-img_hover">
               <div
                 onClick={() => window.open(live_demo_link, '_blank')}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                className="bg-primary hover:shadow-md hover:shadow-[#915EFF] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
               >
                 <BsFillPlayCircleFill className="w-1/2 h-1/2 object-contain" />
               </div>
