@@ -270,7 +270,7 @@ const socialLinks = [
   {
     id: 'cv',
     name: 'Résumé',
-    link: 'https://drive.google.com/file/d/1-vTE1SG3apHGNOTMEN4nZ2ix57uJRVec/view?usp=share_link',
+    link: 'https://drive.google.com/file/d/1DHbd9Hz4ZanLXiI7JsJGgw1v1ecAENk8/view?usp=sharing',
     icons: <BsFillFileEarmarkPdfFill className={`${styles.heroSubText}`} />,
   },
   {
