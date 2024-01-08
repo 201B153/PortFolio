@@ -6,7 +6,7 @@ import { SectionWrapper } from '@/wrapper';
 import { fadeIn, textVariant } from '@/utils/motion';
 import { Tilt } from 'react-tilt';
 import Link from 'next/link';
-import { socials, FaCoffee } from '@/constants';
+import { socials, FaCoffee, FaWhatsapp } from '@/constants';
 
 const Social = () => {
   return (
@@ -38,14 +38,25 @@ const Social = () => {
       </div>
       <div className="mt-6 h-full flex justify-center items-center flex-row max-md:flex-col max-md:space-x-0 space-x-4">
         <p className={`text-sm my-2`}>Liked my work ?</p>
-        <Tilt className="|green-pink-gradient| bg-[#151030] text-white rounded-2xl p-2 hover:shadow-md hover:shadow-purple-700 |border border-solid border-[#915EFF]| w-[250px] h-[46px] flex flex-row">
+        <Link href={'https://www.buymeacoffee.com/mstomar698'} className="|green-pink-gradient| bg-[#151030] text-white rounded-2xl p-2 hover:shadow-md hover:shadow-purple-700 |border border-solid border-[#915EFF]| w-[250px] h-[46px] flex flex-row" target='_blank'>
           <h2
             className={`text-center w-full text-xl flex flex-row justify-evenly`}
           >
             <FaCoffee className="text-2xl" />
             Buy me a Coffee
           </h2>
-        </Tilt>
+        </Link>
+      </div>
+      <div className="mt-6 h-full flex justify-center items-center flex-row max-md:flex-col max-md:space-x-0 space-x-4">
+        <p className={`text-sm my-2`}>Wanna talk one on one ?</p>
+        <Link href={'https://wa.me/+916265187023'} className="|green-pink-gradient| bg-[#151030] text-white rounded-2xl p-2 hover:shadow-md hover:shadow-purple-700 |border border-solid border-[#915EFF]| w-[250px] h-[46px] flex flex-row" target='_blank'>
+          <h2
+            className={`text-center w-full text-xl flex flex-row justify-center space-x-4`}
+          >
+            <FaWhatsapp className="text-2xl" />
+            <span>Let&apos;s Chat</span>{' '}
+          </h2>
+        </Link>
       </div>
     </>
   );

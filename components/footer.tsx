@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { logo } from '../assets';
+import { logoImage } from '../assets';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BsArrowUpSquare } from '@/constants';
@@ -33,15 +33,15 @@ const Footer = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <Image src={logo} alt="logo" className="w-12 h-12 object-contain rounded-full" />
-          <div className="text-white flex flex-col my-2 max-sm:my-4">
+          <Image src={logoImage} alt="logo" className="w-12 h-12 object-contain rounded-full" />
+          <div className="text-white flex flex-col my-2 max-sm:my-0">
             <span
               className={`text-3xl my-auto max-sm:text-xl max-xs:text-[14px] font-bold text-white`}
             >
               mstomar698 &nbsp;
             </span>
             <span
-              className={`small_link sm:text-[16px] text-[14px] tracking-wider text-secondary`}
+              className={` sm:text-[16px] text-[10px] tracking-wider text-secondary`}
             >
               Made with 💖 by{' '}
               <Link
