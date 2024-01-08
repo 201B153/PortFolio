@@ -14,7 +14,8 @@ import dev_bot from './projects/dev_bot.png';
 import lead_me from './projects/lead_me.png';
 import dmail from './projects/dmail.png';
 import pictoral from './projects/pictoral.png';
-
+import s2png from './s2png.png';
+import logoImage from './logo.png';
 export {
   logo,
   fsd,
@@ -32,4 +33,6 @@ export {
   lead_me,
   dmail,
   pictoral,
+  s2png,
+  logoImage
 };

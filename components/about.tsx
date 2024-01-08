@@ -41,15 +41,7 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-sm:text-[14px] max-w-5xl leading-[30px]"
       >
-        I&apos;m a highly skilled full-stack developer with expertise in
-        TypeScript, JavaScript, Node.js, and WebAssembly. I collaborate closely
-        with clients to create efficient, scalable, and user-friendly solutions
-        that solve real-world problems. As a quick learner, I stay up-to-date
-        with the latest software development industry developments to offer
-        innovative and effective solutions. I bring a unique combination of
-        technical expertise, collaborative skills, and passion for innovation to
-        each project, committed to delivering the highest-quality solutions that
-        help businesses achieve their goals. <br />
+        I&apos;m a highly skilled full-stack developer specializing in TypeScript, JavaScript, Node.js, and WebAssembly. My approach involves close collaboration with clients to craft efficient, scalable, and user-friendly solutions that address real-world challenges. As a quick learner, I stay abreast of the latest developments in the software development industry, allowing me to offer innovative and effective solutions. I bring to each project a unique blend of technical expertise, collaborative skills, and a passion for innovation. Committed to delivering the highest-quality solutions, I aim to assist businesses in achieving their goals. <br />
         <a href={'/#contact'} className="text-[#915EFF]">
           Lets work together to bring your ideas to life!
         </a>

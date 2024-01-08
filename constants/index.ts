@@ -14,6 +14,8 @@ import {
   lead_me,
   dmail,
   pictoral,
+  s2png,
+  logoImage,
 } from '../assets';
 import {
   socials,
@@ -69,6 +71,7 @@ import {
   TbBrandThreejs,
   TbBrandTypescript,
   TbCurrencySolana,
+  FaWhatsapp,
 } from './icons';
 
 export const navLinks = [
@@ -107,7 +110,7 @@ const services = [
     link: 'rust_proj',
   },
   {
-    title: 'Web Penetration Tester',
+    title: 'Pen Tester',
     icon: security,
     link: 'about',
   },
@@ -115,8 +118,22 @@ const services = [
 
 const experiences = [
   {
+    title: 'FreeLancer',
+    company_name: 'UpWork | Fiverr | Freelancer.com | Contract',
+    icon: logoImage,
+    iconBg: '#FFF',
+    date: 'Sep 2021 - Now',
+    points: [
+      'Developing and maintaining full scale web applications using related techs.',
+      'Collaborating with clients and other developers to create high-quality products.',
+      'Implementing responsive designs and providing optimised websites.',
+      'Implementing SEO and ensuring cross-browser compatibility.',
+      'Charges are based on the project and the client and can be negotiated.',
+    ],
+  },
+  {
     title: 'Cyber Security Intern',
-    company_name: 'Telakunchi',
+    company_name: 'Talakunchi',
     icon: talakunchi,
     iconBg: '#FF0000',
     date: 'May 2022 - July 2022',
@@ -127,30 +144,17 @@ const experiences = [
       'Providing reports on vulnerabilities and their fixes on daily basis.',
     ],
   },
-  // {
-  //   title: 'Backend Developer Intern',
-  //   company_name: 'EduCheck',
-  //   icon: upwork,
-  //   iconBg: '#FFF',
-  //   date: 'Sep 2022 - Now',
-  //   points: [
-  //     'Developing and maintaining full scale web applications using related techns.',
-  //     'Collaborating with clients and other developers to create high-quality products.',
-  //     'Implementing responsive designs and providing optimised websites.',
-  //     'Implementing SEO and ensuring cross-browser compatibility.',
-  //   ],
-  // },
   {
-    title: 'FreeLancer',
-    company_name: 'UpWork | Fiverr | Freelancer.com',
-    icon: upwork,
-    iconBg: '#FFF',
-    date: 'Sep 2022 - Now',
+    title: 'Full-Stack Developer Intern',
+    company_name: 'Sarva Suvidhaen',
+    icon: s2png,
+    iconBg: '#332941',
+    date: 'May 2023 - Dec 2024',
     points: [
-      'Developing and maintaining full scale web applications using related techns.',
-      'Collaborating with clients and other developers to create high-quality products.',
-      'Implementing responsive designs and providing optimised websites.',
-      'Implementing SEO and ensuring cross-browser compatibility.',
+      'Working with on-market product and developing new features.',
+      'Scaling and maintaining the product with a team of developers and designers.',
+      'Managing and maintaining the database and backend of the product with proper documentation and testing.',
+      'Reporting and providing solutions to the problems faced by the users and clients and working with agile methodology.',
     ],
   },
 ];
@@ -428,4 +432,5 @@ export {
   TbBrandThreejs,
   TbBrandTypescript,
   TbCurrencySolana,
+  FaWhatsapp,
 };

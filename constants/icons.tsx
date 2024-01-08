@@ -22,6 +22,7 @@ import {
   FaReddit,
   FaYoutube,
   FaDev,
+  FaWhatsapp,
 } from 'react-icons/fa';
 import {
   TbBrandCodepen,
@@ -501,6 +502,7 @@ export {
   TbBrandThreejs,
   TbBrandTypescript,
   TbCurrencySolana,
+  FaWhatsapp,
   socials,
   socialLinks,
   technologies,

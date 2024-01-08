@@ -6,7 +6,8 @@ import { fadeIn } from '../utils/motion';
 import Link from 'next/link';
 import { Tilt } from 'react-tilt';
 import { BsArrowDownSquare, socialLinks } from '@/constants';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import LazyLoadComponent from '@/wrapper/lazyLoading';
 
 const Hero = () => {
   const containerRef: any = useRef<HTMLDivElement>(null);
@@ -34,19 +35,19 @@ const Hero = () => {
               Hi, I&apos;m <span className="text-[#915EFF]">Mayank</span>
             </h1>
             <p className={`${styles.heroSubText} mt-2`}>
-              <span className="text-secondary">A</span>
+              <span className="text-secondary pr-1">A</span>
               <br className="sm:block hidden" />
               <span className="text-white font-bold">
                 Full-stack developer
               </span>{' '}
-              <span className="text-secondary">from India</span>
+              <span className="text-secondary">from India .</span>
             </p>
             <div
               className={` mt-4 lg:mt-8 h-[44px] max-sm:h-[40px] w-max lg:h-[80px] flex flex-row space-x-2 justify-evenly px-2 max-sm:px-0 max-md:px-1`}
             >
               {socialLinks.map((item, index) => (
                 <div key={item.id}>
-                  <Tilt className="|border border-solid border-[#915EFF]| bg-[#151030] rounded-lg w-full h-full justify-center flex items-center hover:shadow-md hover:shadow-purple-700 |green-pink-gradient|">
+                  <div className="|border border-solid border-[#915EFF]| bg-[#151030] rounded-lg w-full h-full justify-center flex items-center hover:shadow-md hover:shadow-purple-700 |green-pink-gradient|">
                     <motion.div
                       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
                     >
@@ -63,7 +64,7 @@ const Hero = () => {
                         </div>
                       </Link>
                     </motion.div>
-                  </Tilt>
+                  </div>
                 </div>
               ))}
             </div>
@@ -86,8 +87,9 @@ const Hero = () => {
           ></div>
         </Tilt>
       </div>
-
-      <StarsCanvas />
+      <LazyLoadComponent>
+        <StarsCanvas />
+      </LazyLoadComponent>
 
       <div className="absolute xs:bottom-8 bottom-24 sm:bottom-16 max-sm:bottom-8 w-full flex justify-center items-center z-10 ">
         <a href="#about" title="about">

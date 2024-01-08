@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { navLinks } from '../constants';
-import { logo } from '../assets';
+import { logoImage } from '../assets';
 import { styles } from '@/app/styles';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -47,30 +47,43 @@ const Navbar = () => {
           }}
         >
           <Image
-            src={logo}
+            src={logoImage}
             alt="logo"
             className="w-9 h-9 object-contain rounded-full"
           />
-          <p className="text-secondary text-[18px] font-bold cursor-pointer flex ">
+          <p className="text-secondary hover:text-white text-[18px] font-bold cursor-pointer flex ">
             Mayank &nbsp;
-            <span className="max-md:hidden lg:visible">
-              Singh Tomar
-            </span>
+            <span className="max-md:hidden lg:visible">Singh Tomar</span>
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10 max-md:gap-6">
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? 'text-white' : 'text-secondary'
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
-        </ul>
+        <span className="flex flex-row justify-between gap-10 max-md:gap-6 items-center">
+          <ul className="list-none hidden sm:flex flex-row gap-10 max-md:gap-6">
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`${
+                  active === nav.title ? 'text-white' : 'text-secondary'
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(nav.title)}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
+          <button
+            type="submit"
+            title="hire me"
+            className="text-secondary text-[18px] hover:text-white font-medium max-sm:hidden"
+          >
+            <Link href={'https://wa.me/+916265187023'} className="box" target="_blank">
+              <p>Open to work</p>
+              <span className="card-top"></span>
+              <span className="card-right"></span>
+              <span className="card-bottom"></span>
+              <span className="card-left"></span>
+            </Link>
+          </button>
+        </span>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           {toggle ? (
             <>
@@ -92,7 +105,7 @@ const Navbar = () => {
               !toggle ? 'hidden' : 'flex'
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-2">
+            <ul className="list-none flex justify-end flex-1 flex-col gap-2 items-center">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
@@ -107,6 +120,15 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <li>
+                <Link href={'https://wa.me/+916265187023'} className="box">
+                  <p>Open to work</p>
+                  <span className="card-top"></span>
+                  <span className="card-right"></span>
+                  <span className="card-bottom"></span>
+                  <span className="card-left"></span>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
